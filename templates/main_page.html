@@ -6,14 +6,12 @@
 <body>
 <h1 class="title">Камеры</h1>
 <div class="cam_place">
-    <div class="cam">
-        <img src="../static/images/example.jpg", class="img_cam safe">
-        <div class="text_cam">Камера 1, зал 1</div>
-    </div>
-    <div class="cam">
-        <img src="../static/images/example.jpg", class="img_cam dangerous">
-        <div class="text_cam">Камера 2, зал 1</div>
-    </div>
+    {% for i in range(0,2) %}
+        <div class="cam">
+            <img src="{{ images_paths[0]['camera{}'.format(i + 1)] }}" , class="img_cam {{ image_classes[i] }}">
+            <div class="text_cam">Камера {{ i }}, зал 1</div>
+        </div>
+    {% endfor %}
 </div>
 </body>
 </html>
