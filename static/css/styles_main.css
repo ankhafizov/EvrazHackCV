@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    background-image: url("../images/Evraz.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.cam_place {
+    width: 720px;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+
+.cam {
+    width: 340px;
+    height: 200px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 0.5%;
+}
+
+.text_cam {
+
+}
+
+.img_cam {
+    width: 320px;
+    height: 180px;
+    margin_bottom: 15px;
+}
+
+.safe {
+    border: 10px solid green;
+}
+
+.dangerous {
+    border: 10px solid red;
+}
