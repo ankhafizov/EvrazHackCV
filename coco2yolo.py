@@ -2,7 +2,6 @@ import json
 import cv2
 import os
 
-
 with open("data_task2/train/annotations/COCO_json/coco_annotations_train.json", "r") as f:
     training_data = json.load(f)
 
@@ -13,17 +12,18 @@ def get_shape(path):
 
 def convert(path, x1, y1, x2, y2):
     def sorting(l1, l2):
-        if l1>l2:
-            lmax, lmin = l1,l2
+        if l1 > l2:
+            lmax, lmin = l1, l2
             return lmax, lmin
         else:
             lmax, lmin = l2, l1
             return lmax, lmin
+
     frame_shape = get_shape(path)
     xmax, xmin = sorting(x1, x2)
     ymax, ymin = sorting(y1, y2)
-    dw = 1./frame_shape[1]
-    dh = 1./frame_shape[0]
+    dw = 1. / frame_shape[1]
+    dh = 1. / frame_shape[0]
     x = (xmin + xmax) / 2.0
     y = (ymin + ymax) / 2.0
     w = xmax - xmin
@@ -48,7 +48,8 @@ for i in range(len(training_data["annotations"])):
 
     yolo_bbox = convert(image_path, kitti_bbox[0], kitti_bbox[1], kitti_bbox[2], kitti_bbox[3])
     filename = os.path.join("data_task2", "train", "labels", img_name.replace("jpg", "txt"))
-    content = category_id + " " + str(yolo_bbox[0]) + " " + str(yolo_bbox[1]) + " " + str(yolo_bbox[2]) + " " + str(yolo_bbox[3])
+    content = category_id + " " + str(yolo_bbox[0]) + " " + str(yolo_bbox[1]) + " " + str(yolo_bbox[2]) + " " + str(
+        yolo_bbox[3])
 
     if image_id in check_set:
         file = open(filename, "a")
