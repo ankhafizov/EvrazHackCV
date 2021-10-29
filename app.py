@@ -11,8 +11,8 @@ def main_page():
 
     with open('images_paths.yml') as f:
         images_paths = yaml.load(f, Loader=yaml.FullLoader)
-    images_classes = ['safe', 'dangerous']
-
+    images_classes = ['safe', 'dangerous', 'dangerous', 'safe']
+    
     return render_template('main_page.html', images_paths=images_paths, image_classes=images_classes)
 
 

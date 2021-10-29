@@ -1,2 +1,4 @@
-- camera1: /static/images/example.jpg
-  camera2: /static/images/example.jpg
+- camera1: /static/images/camera1.jpg
+  camera2: /static/images/camera2.jpg
+  camera3: /static/images/camera3.jpg
+  camera4: /static/images/camera4.jpg
