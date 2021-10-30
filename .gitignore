@@ -1,3 +1,5 @@
 .idea
 data_task2
-code_test.zip
+*.zip
+__pycache__/
+output
