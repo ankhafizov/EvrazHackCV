@@ -8,10 +8,13 @@
 <div class="cam_place">
     {% for i in range(0,4) %}
         <div class="cam">
-            <img src="{{ images_paths[0]['camera{}'.format(i + 1)] }}" , class="img_cam {{ image_classes[i] }}">
+            <img src="{{ images_paths['camera{}'.format(i + 1)] }}" , class="img_cam {{ image_classes[i] }}">
             <div class="text_cam">Камера {{ i + 1 }}, зал 1</div>
         </div>
     {% endfor %}
+</div>
+<div class="tech_works">
+
 </div>
 </body>
 </html>
