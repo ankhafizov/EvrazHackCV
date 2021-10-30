@@ -1,10 +1,12 @@
 # EvrazHackCV
-Evraz hackaton 10.2021
+Данный модуль выполняет функции обучения нейро сети yolov5x. 
 
+Для запуска, выплните следующие действия в баш консоли:
 
-```bash
-$ git clone https://github.com/ultralytics/yolov5
-$ cd yolov5
-$ pip install -r requirements.txt
-```
+- скачайте датасет в yolo формате, где данные разделены в пропорции 90/10: https://drive.google.com/file/d/1jWEA9u5-8gwc5LTH6FKmBMNCaQy721hi/view?usp=sharing и поместите в корень этого репозитория. Он был сгенерирован из оригинального датасета датасета скриптом coco2yolo.py, что можно воспроизвести.
 
+- выполните bash prepare_train_dataset.sh для распаковки арзива
+
+- выполните bash pull_and_adjust_yolov5.sh . Этот скрипт скачивает и настраивает yolov5 из git clone https://github.com/ultralytics/yolov5 . При необходимости можно раскоментить строки по установке зависимости внутри скрипта.
+
+- выполните '{ bash train_and_make_submit.sh }'. Так вы воспроизведете обучение и в папке output появится файл сабмита, который можно грузить на сайт хакатона. Статистику по обучению можно посмотреть в папке yolov5/runs/train (по дефолту в yolov5x_freeze_{freeze_layers}_adam_hypl_decay_lf0005)
