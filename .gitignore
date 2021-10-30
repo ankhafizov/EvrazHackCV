@@ -3,3 +3,6 @@ data_task2
 *.zip
 __pycache__/
 output
+
+code_test.zip
+yolo_data*
