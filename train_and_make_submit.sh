@@ -34,6 +34,8 @@ python yolov5/detect.py \
 --weights yolov5/runs/train/${train_tag}/weights/best.pt \
 --source $test_images_location
 
+mkdir mkdir -p output
+
 python ./yolo2coco.py \
 --path yolov5/runs/detect/$train_tag/ \
 --yolo-subdir \
