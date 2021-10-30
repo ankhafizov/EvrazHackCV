@@ -1,11 +1,12 @@
 ## Parameters
 
+freeze_layers=18
+
 test_images_location=yolo_data/images/test
 dataset_in_yolo_form_location=yolo_data/dataset.yaml
 train_tag=yolov5x_freeze_${freeze_layers}_adam_hypl_decay_lf0005
 
-freeze_layers=18
-epochs=100
+epochs=300
 
 # Train
 
@@ -21,7 +22,7 @@ python3 yolov5/train.py \
 --name $train_tag \
 --workers 12 \
 --freeze $freeze_layers \
---hyp hyp.scratch-low.yaml \
+--hyp yola_hyp.scratch-low_custom.yaml \
 --adam
 
 # Test
