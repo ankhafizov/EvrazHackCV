@@ -4,9 +4,9 @@ freeze_layers=18
 
 test_images_location=yolo_data/images/test
 dataset_in_yolo_form_location=yolo_data/dataset.yaml
-train_tag=yolov5x_freeze_${freeze_layers}_adam_hypl_decay_lf0005
+train_tag=yolov5x_freeze_${freeze_layers}_adam_hypl_decay_lf0001
 
-epochs=300
+epochs=120
 
 # Train
 
